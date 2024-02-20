@@ -15,10 +15,24 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import {} from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faTwitter,
+  faFacebookF,
+  faPinterestP,
+} from "@fortawesome/free-brands-svg-icons";
 
 //_ add icons to the library _//
-library.add(faCartShopping, faFolderOpen, faChevronLeft, faChevronRight);
+library.add(
+  faCartShopping,
+  faFolderOpen,
+  faChevronLeft,
+  faChevronRight,
+  faInstagram,
+  faTwitter,
+  faFacebookF,
+  faPinterestP
+);
 
 import App from "./App.vue";
 

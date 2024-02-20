@@ -3,6 +3,7 @@ import { store } from "../store/index.js";
 import AppProduct from "./AppProduct.vue";
 import AppInfo from "./AppInfo.vue";
 import AppLocation from "./AppLocation.vue";
+import AppSocial from "./AppSocial.vue";
 
 export default {
   data() {
@@ -11,7 +12,7 @@ export default {
     };
   },
   methods: {},
-  components: { AppProduct, AppInfo, AppLocation },
+  components: { AppProduct, AppInfo, AppLocation, AppSocial },
 };
 </script>
 
@@ -19,6 +20,7 @@ export default {
   <AppProduct />
   <AppInfo />
   <AppLocation />
+  <AppSocial />
 </template>
 
 <style lang="scss" scoped>

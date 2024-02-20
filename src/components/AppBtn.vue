@@ -6,12 +6,14 @@ export default {
   props: {
     text: String,
     textClass: String,
+    logoIg: Boolean,
   },
 };
 </script>
 
 <template>
   <button :class="textClass" class="button">
+    <font-awesome-icon v-if="logoIg" :icon="['fab', 'instagram']" />
     {{ text }}
   </button>
 </template>
