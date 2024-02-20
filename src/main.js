@@ -12,11 +12,13 @@ import {} from "@fortawesome/free-regular-svg-icons";
 import {
   faCartShopping,
   faFolderOpen,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import {} from "@fortawesome/free-brands-svg-icons";
 
 //_ add icons to the library _//
-library.add(faCartShopping, faFolderOpen);
+library.add(faCartShopping, faFolderOpen, faChevronLeft, faChevronRight);
 
 import App from "./App.vue";
 

@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store/index.js";
+import AppProduct from "./AppProduct.vue";
 
 export default {
   data() {
@@ -8,12 +9,12 @@ export default {
     };
   },
   methods: {},
-  emits: [],
+  components: { AppProduct },
 };
 </script>
 
 <template>
-  <main>main</main>
+  <AppProduct />
 </template>
 
 <style lang="scss" scoped>
