@@ -1,7 +1,7 @@
 <script>
 import { store } from "../store/index.js";
-import AppLogo from "../components/AppLogo.vue";
-import AppBtn from "../components/AppBtn.vue";
+import AppLogo from "./AppLogo.vue";
+import AppBtn from "./AppBtn.vue";
 
 export default {
   data() {

@@ -26,7 +26,7 @@ export default {
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
 section {
-  margin: 7rem 0;
+  margin: 7rem 0 3.5rem 0;
   background-image: url("../assets/img/call-to-action-bg.jpg");
   background-repeat: no-repeat;
   height: 400px;

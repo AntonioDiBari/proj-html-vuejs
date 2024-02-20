@@ -80,4 +80,5 @@ export const store = reactive({
       price: "$10.00 - $14.00",
     },
   ],
+  socials: ["instagram", "twitter", "facebook-f", "pinterest-p"],
 });
