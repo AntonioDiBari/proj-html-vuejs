@@ -4,6 +4,7 @@ import AppProduct from "./AppProduct.vue";
 import AppInfo from "./AppInfo.vue";
 import AppLocation from "./AppLocation.vue";
 import AppSocial from "./AppSocial.vue";
+import AppShop from "./AppShop.vue";
 
 export default {
   data() {
@@ -12,7 +13,7 @@ export default {
     };
   },
   methods: {},
-  components: { AppProduct, AppInfo, AppLocation, AppSocial },
+  components: { AppProduct, AppInfo, AppLocation, AppSocial, AppShop },
 };
 </script>
 
@@ -21,6 +22,7 @@ export default {
   <AppInfo />
   <AppLocation />
   <AppSocial />
+  <AppShop />
 </template>
 
 <style lang="scss" scoped>
