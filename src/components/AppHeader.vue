@@ -40,14 +40,16 @@ export default {
         <span> On Sale</span>
       </div>
     </div>
-    <div class="hero-section wrapper">
-      <span class="subtitle">FRESH & TASTY BAKERY EVERY DAY</span>
-      <h2 class="title">The perfect Fresh Bread</h2>
-      <p class="description">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
-        voluptatum aut facilis sunt porro nam totam iste.
-      </p>
-      <AppBtn :text="`Explore our products`" :textClass="`purple`" />
+    <div class="container">
+      <div class="hero-section">
+        <span class="subtitle">FRESH & TASTY BAKERY EVERY DAY</span>
+        <h2 class="title">The perfect Fresh Bread</h2>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
+          voluptatum aut facilis sunt porro nam totam iste.
+        </p>
+        <AppBtn :text="`Explore our products`" :textClass="`purple`" />
+      </div>
     </div>
   </header>
 </template>

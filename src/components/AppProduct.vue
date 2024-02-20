@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <section class="wrapper">
+  <section class="container">
     <div class="row">
       <div class="col-4">
         <span class="subtitle">OUR PRODUCT</span>
@@ -64,12 +64,6 @@ export default {
 }
 .row {
   margin-top: 100px;
-}
-.col-4,
-.col-8,
-.col-3,
-.col-9 {
-  padding: 0;
 }
 
 .col-3 {
