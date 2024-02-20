@@ -1,6 +1,7 @@
 <script>
 import { store } from "../store/index.js";
 import AppProduct from "./AppProduct.vue";
+import AppInfo from "./AppInfo.vue";
 
 export default {
   data() {
@@ -9,12 +10,13 @@ export default {
     };
   },
   methods: {},
-  components: { AppProduct },
+  components: { AppProduct, AppInfo },
 };
 </script>
 
 <template>
   <AppProduct />
+  <AppInfo />
 </template>
 
 <style lang="scss" scoped>

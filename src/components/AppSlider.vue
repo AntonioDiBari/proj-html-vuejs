@@ -43,6 +43,7 @@ export default {
   props: {
     numberSlide: Number,
     hoverClass: String,
+    description: Boolean,
   },
 };
 </script>
@@ -64,6 +65,11 @@ export default {
       </div>
       <div v-if="hoverClass == 'show-menu'" :class="`slide-menu`">
         <span>SELECT OPTIONS/ QUICK VIEW</span>
+      </div>
+      <div v-if="description" class="description">
+        <b class="inline-block"> {{ store.slides[indexCatch(index)].name }}</b
+        ><br />
+        {{ store.slides[indexCatch(index)].price }}
       </div>
     </div>
   </div>
@@ -110,10 +116,18 @@ export default {
       padding-top: 50%;
       display: none;
     }
+    .slide-menu span {
+      font-size: 10px;
+    }
   }
   .slide:hover .slide-info,
   .slide:hover .slide-menu {
     display: block;
+  }
+  .description {
+    color: $purple;
+    text-align: center;
+    height: 50px;
   }
 }
 </style>
