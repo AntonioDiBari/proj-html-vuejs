@@ -22,5 +22,6 @@ export default {
 
 .logo {
   width: 150px;
+  min-width: 150px;
 }
 </style>

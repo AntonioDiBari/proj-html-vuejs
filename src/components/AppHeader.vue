@@ -11,6 +11,9 @@ export default {
   },
   methods: {},
   components: { AppLogo, AppBtn },
+  props: {
+    navLinks: Array,
+  },
 };
 </script>
 
@@ -21,8 +24,8 @@ export default {
 
       <ul class="mb-4 fw-medium">
         <li
-          v-for="link in store.navLinks.filter((link, index) => {
-            return index != store.navLinks.length - 1;
+          v-for="link in navLinks.filter((link, index) => {
+            return index != navLinks.length - 1;
           })"
         >
           {{ link.toUpperCase() }}
@@ -36,7 +39,7 @@ export default {
         <span> Demos</span>
       </div>
       <div class="tag">
-        <span>$ 39</span>
+        <span class="tag-price"><sup>$</sup><var>39</var></span>
         <span> On Sale</span>
       </div>
     </div>
@@ -97,7 +100,6 @@ header {
     .tag {
       height: 50px;
       width: 50px;
-      padding: 8px;
       cursor: pointer;
       text-align: center;
       background-color: white;
@@ -107,8 +109,12 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      gap: 3px;
+      justify-content: center;
+      .tag-price {
+        color: #65bc7b;
+        font-size: 20px;
+        font-weight: bolder;
+      }
     }
     .tag:hover {
       box-shadow: 0px 0px 10px 0px grey;

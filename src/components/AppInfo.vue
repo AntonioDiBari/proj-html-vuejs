@@ -49,14 +49,16 @@ export default {
           </div>
         </div>
       </div>
-      <div class="col-6 col-right">
-        <h4 class="subtitle">DON'T JUST TAKE OUR WORD FOR IT</h4>
-        <h2 class="title mt-3">
-          "Finnaly found an alternative to the mass produced products.
-          Somethings that incorporates real organic ingrediants, nutrient dense
-          wellness while promoting sustainability and activity.""
-        </h2>
-        <h4 class="subtitle mt-3">Rachel Cooper, Founder</h4>
+      <div class="col-6">
+        <div class="col-right">
+          <h4 class="subtitle">DON'T JUST TAKE OUR WORD FOR IT</h4>
+          <h2 class="title mt-3">
+            "Finnaly found an alternative to the mass produced products.
+            Somethings that incorporates real organic ingrediants, nutrient
+            dense wellness while promoting sustainability and activity.""
+          </h2>
+          <h4 class="subtitle mt-3">Rachel Cooper, Founder</h4>
+        </div>
       </div>
     </div>
     <div class="step mb-5">

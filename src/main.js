@@ -14,6 +14,7 @@ import {
   faFolderOpen,
   faChevronLeft,
   faChevronRight,
+  faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
@@ -28,6 +29,7 @@ library.add(
   faFolderOpen,
   faChevronLeft,
   faChevronRight,
+  faChevronUp,
   faInstagram,
   faTwitter,
   faFacebookF,

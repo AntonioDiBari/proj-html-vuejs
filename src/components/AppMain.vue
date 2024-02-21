@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store/index.js";
+
 import AppProduct from "./AppProduct.vue";
 import AppInfo from "./AppInfo.vue";
 import AppLocation from "./AppLocation.vue";

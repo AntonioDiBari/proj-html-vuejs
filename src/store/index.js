@@ -1,17 +1,17 @@
 import { reactive } from "vue";
 
 export const store = reactive({
-  navLinks: [
-    "Home",
-    "Shop",
-    "About",
-    "Gallery",
-    "Locations",
-    "Journals",
-    "Contact",
-    "My Account",
-    "Orders",
-  ],
+  // navLinks: [
+  //   "Home",
+  //   "Shop",
+  //   "About",
+  //   "Gallery",
+  //   "Locations",
+  //   "Journals",
+  //   "Contact",
+  //   "My Account",
+  //   "Orders",
+  // ],
   slides: [
     {
       name: "Choco Chip Cookies",
@@ -80,5 +80,12 @@ export const store = reactive({
       price: "$10.00 - $14.00",
     },
   ],
-  socials: ["instagram", "twitter", "facebook-f", "pinterest-p"],
+  // socials: ["instagram", "twitter", "facebook-f", "pinterest-p"],
+  apiUriSocial: "http://localhost:3000/socials",
+  apiUriNavLinks: "http://localhost:3000/navLinks",
+  apiUriSlides: "http://localhost:3000/slides",
+  socials: [],
+  slides2: [],
+  navLinks: [],
+  newsletterUsers: [],
 });

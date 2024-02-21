@@ -8,10 +8,33 @@ export default {
   data() {
     return {
       store,
+      userMail: "",
     };
   },
-  methods: {},
+  methods: {
+    registration() {
+      if (
+        this.userMail.length > 20 &&
+        this.userMail.includes("@") &&
+        (this.userMail.includes(".it") || this.userMail.includes(".com"))
+      ) {
+        alert(
+          `Grazie per esserti iscritto alla notra Newsletter, riveverai promo e tanto altro sulla tua mail ${this.userMail}`
+        );
+        store.newsletterUsers.push(this.userMail);
+      } else {
+        alert("Inserire una mail valida!");
+      }
+    },
+    backTop() {
+      document.documentElement.scrollTop = 0;
+    },
+  },
   components: { AppLogo, AppBtn },
+  props: {
+    navLinks: Array,
+    socials: Array,
+  },
 };
 </script>
 
@@ -24,8 +47,8 @@ export default {
 
           <ul class="mb-4 fw-medium">
             <li
-              v-for="link in store.navLinks.filter((link, index) => {
-                return index != 0 && index != store.navLinks.length - 2;
+              v-for="link in navLinks.filter((link, index) => {
+                return index != 0 && index != navLinks.length - 2;
               })"
             >
               {{ link.toUpperCase() }}
@@ -50,16 +73,21 @@ export default {
             <h4 class="title mb-4">Subscrive to our Newsletter</h4>
             <div class="form-mail d-flex">
               <input
+                v-model="userMail"
                 type="email"
                 placeholder="Enter email address*"
                 class="form-control"
               />
-              <AppBtn :text="`Subscrive`" :textClass="`white`" />
+              <AppBtn
+                :text="`Subscribe`"
+                :textClass="`white`"
+                @click="registration()"
+              />
             </div>
           </div>
           <div class="social-section">
             <ul>
-              <li v-for="social in store.socials" class="social-logo">
+              <li v-for="social in socials" class="social-logo">
                 <font-awesome-icon
                   :icon="`fa-brands fa-${social}`"
                   class="clicable"
@@ -70,6 +98,9 @@ export default {
         </div>
       </div>
     </div>
+    <div class="back-top" @click="backTop()">
+      <font-awesome-icon icon="fa-solid fa-chevron-up" />
+    </div>
   </footer>
 </template>
 
@@ -77,6 +108,25 @@ export default {
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
 
+footer {
+  position: relative;
+  .back-top {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: grey;
+  }
+  .back-top:hover {
+    background-color: #474747;
+  }
+}
 .footer-left {
   display: flex;
   flex-direction: column;
@@ -128,6 +178,10 @@ export default {
   .newsletter-section .form-mail {
     width: 400px;
     gap: 1rem;
+    input::placeholder {
+      font-size: 0.8rem;
+      color: grey;
+    }
   }
   .social-section .social-logo {
     display: inline-block;
