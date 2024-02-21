@@ -28,7 +28,7 @@ export default {
       }
     },
     nextSlide() {
-      if (this.activeSlide < store.slides.length - 1) {
+      if (this.activeSlide < store.slides2.length - 1) {
         this.activeSlide++;
       } else this.activeSlide = 0;
     },
@@ -36,7 +36,7 @@ export default {
       if (this.activeSlide > 0) {
         this.activeSlide--;
       } else {
-        this.activeSlide = store.slides.length - 1;
+        this.activeSlide = store.slides2.length - 1;
       }
     },
   },
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <template>
-  <div class="slider">
+  <div v-if="store.slides2.length > 0" class="slider">
     <div @click="prevSlide()" class="arrow-left">
       <font-awesome-icon icon="fa-solid fa-chevron-left" />
     </div>
@@ -57,19 +57,19 @@ export default {
       <font-awesome-icon icon="fa-solid fa-chevron-right" />
     </div>
     <div v-for="(slide, index) in numberSlide" class="slide">
-      <img :src="getUrl(store.slides[indexCatch(index)].imagePath)" alt="" />
+      <img :src="getUrl(store.slides2[indexCatch(index)].imagePath)" alt="" />
       <div v-if="hoverClass == 'show-info'" :class="`slide-info`">
-        <h2>{{ store.slides[indexCatch(index)].name }}</h2>
-        <div>{{ store.slides[indexCatch(index)].description }}</div>
-        <h2>{{ store.slides[indexCatch(index)].price }}</h2>
+        <h2>{{ store.slides2[indexCatch(index)].name }}</h2>
+        <div>{{ store.slides2[indexCatch(index)].description }}</div>
+        <h2>{{ store.slides2[indexCatch(index)].price }}</h2>
       </div>
       <div v-if="hoverClass == 'show-menu'" :class="`slide-menu`">
         <span>SELECT OPTIONS/ QUICK VIEW</span>
       </div>
       <div v-if="description" class="description">
-        <b class="inline-block"> {{ store.slides[indexCatch(index)].name }}</b
+        <b class="inline-block"> {{ store.slides2[indexCatch(index)].name }}</b
         ><br />
-        {{ store.slides[indexCatch(index)].price }}
+        {{ store.slides2[indexCatch(index)].price }}
       </div>
     </div>
   </div>

@@ -35,7 +35,7 @@ export default {
   components: { AppHeader, AppMain, AppFooter },
   created() {
     this.fetchNavLinks();
-    // this.fetchSlides();
+    this.fetchSlides();
     this.fetchSocials();
   },
 };

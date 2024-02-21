@@ -1,15 +1,11 @@
 <script>
-import { store } from "../store/index.js";
-
 import AppBtn from "./AppBtn.vue";
 import AppSlider from "./AppSlider.vue";
 import AppEvent from "./AppEvent.vue";
 
 export default {
   data() {
-    return {
-      store,
-    };
+    return {};
   },
   methods: {},
   components: { AppBtn, AppSlider, AppEvent },

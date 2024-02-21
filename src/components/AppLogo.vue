@@ -1,11 +1,7 @@
 <script>
-import { store } from "../store/index.js";
-
 export default {
   data() {
-    return {
-      store,
-    };
+    return {};
   },
 };
 </script>

@@ -1,13 +1,10 @@
 <script>
-import { store } from "../store/index.js";
 import AppLogo from "./AppLogo.vue";
 import AppBtn from "./AppBtn.vue";
 
 export default {
   data() {
-    return {
-      store,
-    };
+    return {};
   },
   methods: {},
   components: { AppLogo, AppBtn },
